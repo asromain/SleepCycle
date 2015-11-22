@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="SleepCycle.MainPageBackup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SleepCycle"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Height="37" VerticalAlignment="Top">
+            <TextBlock x:Name="ApplicationTitle" Text="Accelerometer" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+        </StackPanel>
+
+        <TextBlock x:Name="width" TextWrapping="Wrap" Text="X : " FontSize="20" Margin="81,60,-81,-60"/>
+        <TextBlock x:Name="length" TextWrapping="Wrap" Text="Y : " FontSize="20" Margin="81,102,-81,-102"/>
+        <TextBlock x:Name="depth" TextWrapping="Wrap" Text="Z : " FontSize="20" Margin="81,140,-81,-140" />
+
+        <TextBlock x:Name="data_width" TextWrapping="Wrap" Text="X" FontSize="20" Margin="110,60,-81,-60"/>
+        <TextBlock x:Name="data_length" TextWrapping="Wrap" Text="Y" FontSize="20" Margin="110,102,-81,-102"/>
+        <TextBlock x:Name="data_depth" TextWrapping="Wrap" Text="Z" FontSize="20" Margin="110,140,-81,-140" />
+
+        <Rectangle Fill="Red" HorizontalAlignment="Left" Height="22" Width="22" Margin="40,60,0,0" Stroke="Black" VerticalAlignment="Top" />
+        <Rectangle Fill="Blue" HorizontalAlignment="Left" Height="22" Width="22" Margin="40,102,0,0" Stroke="Black" VerticalAlignment="Top" />
+        <Rectangle Fill="Green" HorizontalAlignment="Left" Height="22" Width="22" Margin="40,140,0,0" Stroke="Black" VerticalAlignment="Top" />
+
+        <Button x:Name="start_and_stop" Content="START" HorizontalAlignment="Right" Margin="215,71,30,0" VerticalAlignment="Top" Height="87" Width="139" FontSize="30" Click="start_and_stop_Click"/>
+
+        <Border x:Name="CanvasBorder" Margin="0,120,0,0"
+                BorderThickness="1" BorderBrush="#4CFFFFFF"              
+                Width="404" Height="404" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Canvas x:Name="my_canvas" Width="400" Height="400" Background="#190EC0FF" />
+        </Border>
+    </Grid>
+</Page>
